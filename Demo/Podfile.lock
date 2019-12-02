@@ -1,0 +1,20 @@
+PODS:
+  - KiwiMapVendor (0.1.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - KiwiMapVendor
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - KiwiMapVendor
+    - SnapKit
+
+SPEC CHECKSUMS:
+  KiwiMapVendor: f72ce99f79c7eeb9b2a3d49bad87f071a84334c5
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: b42bacfe32e5190afb4624a36ff5e111fee682d7
+
+COCOAPODS: 1.8.4

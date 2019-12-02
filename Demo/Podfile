@@ -1,0 +1,9 @@
+platform :ios, '11.0'
+
+target 'MapDemo' do
+  use_frameworks!
+
+  pod 'KiwiMapVendor'
+  pod 'SnapKit'
+
+end
