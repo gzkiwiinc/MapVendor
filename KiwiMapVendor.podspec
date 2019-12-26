@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.frameworks   = 'UIKit','MapKit','JavaScriptCore','QuartzCore','CoreLocation','SystemConfiguration','CoreTelephony','Security','OpenGLES','CoreText','CoreGraphics','GLKit'
-  s.libraries    = 'z','c++' ,'sqlite3.0' ,'stdc++.6.0.9'
+  s.libraries    = 'z','c++','sqlite3.0'
     
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
