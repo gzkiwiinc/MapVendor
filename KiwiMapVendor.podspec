@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KiwiMapVendor"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "map vendor"
   s.homepage     = "https://github.com/gzkiwiinc/MapVendor"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
