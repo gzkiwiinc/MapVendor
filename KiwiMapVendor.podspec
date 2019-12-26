@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KiwiMapVendor"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "map vendor"
   s.homepage     = "https://github.com/gzkiwiinc/MapVendor"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -9,12 +9,13 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.frameworks   = 'UIKit','MapKit','JavaScriptCore','QuartzCore','CoreLocation','SystemConfiguration','CoreTelephony','Security','OpenGLES','CoreText','CoreGraphics','GLKit'
-  s.libraries    = 'z','c++'
+  s.libraries    = 'z','c++' ,'sqlite3.0' ,'stdc++.6.0.9'
     
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
 
-  s.resources = 'MapVendor/VendorFramework/MAMapKit.framework/AMap.bundle'
+  s.resources = 'MapVendor/VendorFramework/MAMapKit.framework/AMap.bundle','MapVendor/VendorFramework/BaiduMapAPI_Map.framework/mapapi.bundle'
   s.vendored_frameworks = 'MapVendor/VendorFramework/*.framework'
+  s.vendored_libraries = 'MapVendor/VendorFramework/thirdlibs/*.a'
 
 end

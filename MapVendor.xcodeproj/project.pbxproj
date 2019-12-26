@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850C249523A32F1D00AC67D3 /* KiwiMapVendor.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 850C249423A32F1D00AC67D3 /* KiwiMapVendor.podspec */; };
+		856F2D2223B4467D00596369 /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856F2D1A23B4467D00596369 /* BaiduMapAPI_Utils.framework */; };
+		856F2D2323B4467D00596369 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 856F2D1C23B4467D00596369 /* libcrypto.a */; };
+		856F2D2423B4467D00596369 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 856F2D1D23B4467D00596369 /* libssl.a */; };
+		856F2D2523B4467D00596369 /* BaiduMapAPI_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856F2D1E23B4467D00596369 /* BaiduMapAPI_Map.framework */; };
+		856F2D2823B4467D00596369 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856F2D2123B4467D00596369 /* BaiduMapAPI_Base.framework */; };
 		85EE24FA23912015007A16A9 /* MapVendor.h in Headers */ = {isa = PBXBuildFile; fileRef = 85EE24F823912015007A16A9 /* MapVendor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85EE2503239120E8007A16A9 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EE2501239120E8007A16A9 /* AMapFoundationKit.framework */; };
 		85EE2504239120E8007A16A9 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EE2502239120E8007A16A9 /* MAMapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		850C249423A32F1D00AC67D3 /* KiwiMapVendor.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = KiwiMapVendor.podspec; sourceTree = SOURCE_ROOT; };
+		856F2D1A23B4467D00596369 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
+		856F2D1C23B4467D00596369 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		856F2D1D23B4467D00596369 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		856F2D1E23B4467D00596369 /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
+		856F2D2123B4467D00596369 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		85EE24F523912015007A16A9 /* MapVendor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapVendor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EE24F823912015007A16A9 /* MapVendor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapVendor.h; sourceTree = "<group>"; };
 		85EE24F923912015007A16A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -25,14 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856F2D2423B4467D00596369 /* libssl.a in Frameworks */,
 				85EE2504239120E8007A16A9 /* MAMapKit.framework in Frameworks */,
 				85EE2503239120E8007A16A9 /* AMapFoundationKit.framework in Frameworks */,
+				856F2D2323B4467D00596369 /* libcrypto.a in Frameworks */,
+				856F2D2823B4467D00596369 /* BaiduMapAPI_Base.framework in Frameworks */,
+				856F2D2223B4467D00596369 /* BaiduMapAPI_Utils.framework in Frameworks */,
+				856F2D2523B4467D00596369 /* BaiduMapAPI_Map.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		856F2D1B23B4467D00596369 /* thirdlibs */ = {
+			isa = PBXGroup;
+			children = (
+				856F2D1C23B4467D00596369 /* libcrypto.a */,
+				856F2D1D23B4467D00596369 /* libssl.a */,
+			);
+			path = thirdlibs;
+			sourceTree = "<group>";
+		};
 		85EE24EB23912015007A16A9 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +78,7 @@
 		85EE24F723912015007A16A9 /* MapVendor */ = {
 			isa = PBXGroup;
 			children = (
+				850C249423A32F1D00AC67D3 /* KiwiMapVendor.podspec */,
 				85EE24F823912015007A16A9 /* MapVendor.h */,
 				85EE24F923912015007A16A9 /* Info.plist */,
 				85EE2500239120E8007A16A9 /* VendorFramework */,
@@ -62,6 +89,10 @@
 		85EE2500239120E8007A16A9 /* VendorFramework */ = {
 			isa = PBXGroup;
 			children = (
+				856F2D2123B4467D00596369 /* BaiduMapAPI_Base.framework */,
+				856F2D1E23B4467D00596369 /* BaiduMapAPI_Map.framework */,
+				856F2D1A23B4467D00596369 /* BaiduMapAPI_Utils.framework */,
+				856F2D1B23B4467D00596369 /* thirdlibs */,
 				85EE2501239120E8007A16A9 /* AMapFoundationKit.framework */,
 				85EE2502239120E8007A16A9 /* MAMapKit.framework */,
 			);
@@ -137,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				850C249523A32F1D00AC67D3 /* KiwiMapVendor.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +326,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MapVendor/VendorFramework/thirdlibs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KW.MapVendor;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -323,6 +359,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MapVendor/VendorFramework/thirdlibs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = KW.MapVendor;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
