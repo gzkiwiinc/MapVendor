@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		856F2D3A23B4968A00596369 /* BasicBaiduViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856F2D3923B4968A00596369 /* BasicBaiduViewController.swift */; };
 		857554A02394B2FD00843792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8575549F2394B2FD00843792 /* AppDelegate.swift */; };
 		857554A72394B2FD00843792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857554A52394B2FD00843792 /* Main.storyboard */; };
 		857554A92394B2FD00843792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 857554A82394B2FD00843792 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		2826EEB2F76BB9AF12959A2B /* Pods-MapDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemo.debug.xcconfig"; path = "Target Support Files/Pods-MapDemo/Pods-MapDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		828A07EC5006D3CEAFDF3F9C /* Pods-MapDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapDemo.release.xcconfig"; path = "Target Support Files/Pods-MapDemo/Pods-MapDemo.release.xcconfig"; sourceTree = "<group>"; };
+		856F2D3923B4968A00596369 /* BasicBaiduViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicBaiduViewController.swift; sourceTree = "<group>"; };
 		8575549C2394B2FD00843792 /* MapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8575549F2394B2FD00843792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		857554A62394B2FD00843792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				857554A52394B2FD00843792 /* Main.storyboard */,
 				857554B32394B51C00843792 /* RootMenuTableViewController.swift */,
 				857554B62394B73700843792 /* BasicGaodeViewController.swift */,
+				856F2D3923B4968A00596369 /* BasicBaiduViewController.swift */,
 			);
 			path = MapDemo;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				857554B72394B73700843792 /* BasicGaodeViewController.swift in Sources */,
 				857554B42394B51C00843792 /* RootMenuTableViewController.swift in Sources */,
 				857554A02394B2FD00843792 /* AppDelegate.swift in Sources */,
+				856F2D3A23B4968A00596369 /* BasicBaiduViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
