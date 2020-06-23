@@ -222,6 +222,15 @@ extern "C" {
     extern BOOL MACircleContainsCoordinate(CLLocationCoordinate2D point, CLLocationCoordinate2D center, double radius);
     
     /**
+     * @brief 获取某坐标点距线上最近的坐标点
+     * @param point     点
+     * @param polyline  线
+     * @param count     线里点的数量
+     * @return 某点到线上最近的点
+     */
+    extern MAMapPoint MAGetNearestMapPointFromPolyline(MAMapPoint point, MAMapPoint *polyline, NSUInteger count);
+
+    /**
      * @brief 判断点是否在多边形内
      * @param point   点
      * @param polygon 多边形

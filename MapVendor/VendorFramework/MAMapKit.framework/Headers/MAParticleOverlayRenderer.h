@@ -6,6 +6,9 @@
 //  Copyright © 2018年 Amap. All rights reserved.
 //
 
+#import "MAConfig.h"
+#if MA_INCLUDE_OVERLAY_ParticleSystem
+
 #import "MAOverlayRenderer.h"
 #import "MAParticleOverlayOptions.h"
 #import "MAParticleOverlay.h"
@@ -24,3 +27,5 @@
 - (instancetype)initWithParticleOverlay:(MAParticleOverlay *)particleOverlay;
 
 @end
+
+#endif

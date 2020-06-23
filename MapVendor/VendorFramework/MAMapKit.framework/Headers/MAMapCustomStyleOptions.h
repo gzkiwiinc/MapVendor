@@ -13,6 +13,9 @@
 ///自定义样式二进制
 @property (nonatomic, strong) NSData *styleData;
 
+///海外自定义样式文件路径
+@property (nonatomic, strong) NSString *styleDataOverseaPath;
+
 ///设置地图自定义样式对应的styleID，从官网获取
 @property (nonatomic, strong) NSString *styleId;
 
@@ -21,6 +24,7 @@
 
 ///样式额外的配置，比如路况，背景颜色等  since 6.7.0
 @property (nonatomic, strong) NSData *styleExtraData;
+
 
 @end
 

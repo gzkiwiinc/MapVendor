@@ -776,6 +776,22 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 - (void)mapView:(MAMapView *)mapView regionDidChangeAnimated:(BOOL)animated;
 
 /**
+ * @brief 地图区域即将改变时会调用此接口，如实现此接口则不会触发回掉mapView:regionWillChangeAnimated:
+ * @param mapView 地图View
+ * @param animated 是否动画
+* @param wasUserAction 标识是否是用户动作
+ */
+- (void)mapView:(MAMapView *)mapView regionWillChangeAnimated:(BOOL)animated wasUserAction:(BOOL)wasUserAction;
+
+/**
+ * @brief 地图区域改变完成后会调用此接口，如实现此接口则不会触发回掉mapView:regionDidChangeAnimated:
+ * @param mapView 地图View
+ * @param animated 是否动画
+ * @param wasUserAction 标识是否是用户动作
+ */
+- (void)mapView:(MAMapView *)mapView regionDidChangeAnimated:(BOOL)animated wasUserAction:(BOOL)wasUserAction;
+
+/**
  * @brief 地图将要发生移动时调用此接口
  * @param mapView       地图view
  * @param wasUserAction 标识是否是用户动作
