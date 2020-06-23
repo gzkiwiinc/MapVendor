@@ -7,6 +7,8 @@
 //
 
 #import "MAConfig.h"
+#if MA_INCLUDE_OVERLAY_HEATMAP
+
 #import "MAShape.h"
 #import "MAOverlay.h"
 
@@ -105,3 +107,5 @@ typedef NS_ENUM(NSInteger, MAHeatMapType)
 + (instancetype)heatMapOverlayWithOption:(MAHeatMapVectorOverlayOptions *)option;
 
 @end
+
+#endif

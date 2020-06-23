@@ -7,6 +7,8 @@
 //
 
 #import "MAConfig.h"
+#if MA_INCLUDE_OVERLAY_ParticleSystem
+
 #import "MAShape.h"
 #import "MAOverlay.h"
 #import "MAParticleOverlayOptions.h"
@@ -33,3 +35,5 @@
 - (void)updateOverlayOption:(MAParticleOverlayOptions *)overlayOption;
 
 @end
+
+#endif

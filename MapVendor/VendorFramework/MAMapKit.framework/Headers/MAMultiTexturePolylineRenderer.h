@@ -18,11 +18,17 @@
 ///关联的MAMultiPolyline model
 @property (nonatomic, readonly) MAMultiPolyline *multiPolyline;
 
-///分段纹理图片数组
+///分段纹理图片数组, 支持非PowerOfTwo图片
 @property (nonatomic, strong) NSArray *strokeTextureImages;
 
 ///取分段纹理id,返回分段纹理id数组, 如果strokeTextureImages未指定、尚未加载或加载失败，返回值可能包含0
 @property (nonatomic, strong, readonly) NSArray<NSNumber*> *strokeTextureIDs;
+
+///是否启用显示范围，YES启用，不启用时展示全路径 since 7.5.0
+@property (nonatomic, assign) BOOL showRangeEnabled;
+
+///显示范围 since 7.5.0
+@property (nonatomic, assign) MAPathShowRange showRange;
 
 /**
  * @brief 根据指定的MAMultiPolyline生成一个多段线Renderer
@@ -33,7 +39,7 @@
 
 /**
  * @brief 加载分段绘制的纹理图片. 需要分段纹理绘制时，必须设置。否则使用默认纹理绘制
- * @param textureImages 必须为UIImage数组，纹理图片（需满足：长宽相等，且宽度值为2的次幂）。若为nil，则清空原有纹理
+ * @param textureImages 必须为UIImage数组，支持非PowerOfTwo图片。若为nil，则清空原有纹理
  * @return 是否成功，若纹理加载失败返回0
  */
 - (BOOL)loadStrokeTextureImages:(NSArray *)textureImages __attribute__((deprecated("已废弃, 请通过属性strokeTextureImages设置")));

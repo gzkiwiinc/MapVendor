@@ -5,6 +5,7 @@
 //  Created by shaobin on 16/10/24.
 //  Copyright © 2016 Amap. All rights reserved.
 //
+//  Public version
 
 #ifndef MAConfig_h
 #define MAConfig_h
@@ -69,8 +70,20 @@
 #define MA_INCLUDE_OVERLAY_MAMultiPoint 1
 #endif
 
+#ifndef MA_INCLUDE_OVERLAY_ParticleSystem
+#define MA_INCLUDE_OVERLAY_ParticleSystem 1
+#endif
+
 #ifndef MA_INCLUDE_3DModel
 #define MA_INCLUDE_3DModel 1
+#endif
+
+#ifndef MA_INCLUDE_OVERSEA
+#define MA_INCLUDE_OVERSEA 0
+#endif
+
+#ifndef MA_ENABLE_ThirdPartyLog
+#define MA_ENABLE_ThirdPartyLog 0
 #endif
 
 #endif /* MAConfig_h */

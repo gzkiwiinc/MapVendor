@@ -11,14 +11,6 @@
 #import "MAOverlay.h"
 #import "MALineDrawType.h"
 
-///虚线类型
-typedef NS_ENUM(NSUInteger, MALineDashType) {
-    kMALineDashTypeNone = 0,     ///<不画虚线
-    kMALineDashTypeSquare,       ///<方块样式
-    kMALineDashTypeDot,          ///<圆点样式
-};
-
-
 #define kMAOverlayRendererDefaultStrokeColor [UIColor colorWithRed:0.3 green:0.63 blue:0.89 alpha:0.8]
 #define kMAOverlayRendererDefaultFillColor [UIColor colorWithRed:0.77 green:0.88 blue:0.94 alpha:0.8]
 
@@ -28,6 +20,7 @@ typedef NS_ENUM(NSUInteger, MALineDashType) {
 @interface MAOverlayRenderer : NSObject {
     @protected
     GLuint _strokeTextureID;
+    CGSize _strokeTextureSize;
     BOOL _needsUpdate;
     BOOL _needsLoadStrokeTexture;
 }
@@ -38,7 +31,7 @@ typedef NS_ENUM(NSUInteger, MALineDashType) {
 ///关联的overlay对象
 @property (nonatomic, readonly, retain) id <MAOverlay> overlay;
 
-///用于生成笔触纹理id的图片（image需满足: 长宽相等,且宽度值为2的整数次幂; 如果您需要减轻绘制产生的锯齿,您可以参考AMap.bundle中的traffic_texture_blue.png的方式,在image两边增加部分透明像素.)。（since 5.3.0）
+///用于生成笔触纹理id的图片（支持非PowerOfTwo图片; 如果您需要减轻绘制产生的锯齿,您可以参考AMap.bundle中的traffic_texture_blue.png的方式,在image两边增加部分透明像素.)。（since 5.3.0）
 @property (nonatomic, strong) UIImage *strokeImage;
 
 ///笔触纹理id, 修改纹理id参考, 如果strokeImage未指定、尚未加载或加载失败返回0

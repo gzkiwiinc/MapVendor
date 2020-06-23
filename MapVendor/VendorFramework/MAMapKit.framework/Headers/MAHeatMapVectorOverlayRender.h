@@ -6,6 +6,8 @@
 //  Copyright © 2019 Amap. All rights reserved.
 //
 #import "MAConfig.h"
+#if MA_INCLUDE_OVERLAY_HEATMAP
+
 #import "MAOverlayRenderer.h"
 #import "MAHeatMapVectorOverlay.h"
 
@@ -30,3 +32,5 @@
 - (MAHeatMapVectorItem *)getHeatMapItem:(CLLocationCoordinate2D )coordinate;
 
 @end
+
+#endif

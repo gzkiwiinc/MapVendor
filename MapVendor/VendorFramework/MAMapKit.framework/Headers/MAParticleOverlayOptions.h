@@ -6,8 +6,9 @@
 //  Copyright © 2018年 Amap. All rights reserved.
 //
 
-
 #import "MAConfig.h"
+#if MA_INCLUDE_OVERLAY_ParticleSystem
+
 #import "MAShape.h"
 #import "MAOverlay.h"
 
@@ -292,3 +293,5 @@ typedef NS_ENUM(NSInteger, MAParticleOverlayType)
 + (NSArray<MAParticleOverlayOptions *> *)particleOverlayOptionsWithType:(MAParticleOverlayType)particleType;
 
 @end
+
+#endif
