@@ -73,7 +73,7 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 ///地图view的delegate
 @property (nonatomic, weak) id<MAMapViewDelegate> delegate;
 
-///地图类型
+///地图类型。注意：自定义样式优先级高于mapType，如开启了自定义样式，要关闭自定义样式后mapType才生效
 @property (nonatomic) MAMapType mapType;
 
 ///当前地图的中心点，改变该值时，地图的比例尺级别不会发生变化
@@ -134,7 +134,7 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 @property (nonatomic, getter = isShowTraffic) BOOL showTraffic;
 
 ///设置实时交通颜色,key为 MATrafficStatus
-@property (nonatomic, copy) NSDictionary <NSNumber *, UIColor *> *trafficStatus;
+@property (nonatomic, copy) NSDictionary <NSNumber *, UIColor *> *trafficStatus __attribute((deprecated("已废弃 since 7.8.0")));
 
 ///设置实时交通线宽系数，默认线宽系数为0.8，范围为[0 - 1] (since 5.3.0)
 @property (nonatomic, assign) CGFloat trafficRatio __attribute((deprecated("已废弃 since 6.0.0, 不再支持修改实时交通线宽")));
@@ -320,6 +320,14 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
 - (void)takeSnapshotInRect:(CGRect)rect withCompletionBlock:(void (^)(UIImage *resultImage, NSInteger state))block;
 
 /**
+ * @brief 异步在指定区域内截图(默认会包含该区域内的annotationView), 地图载入完整时回调 (since 7.8.0)
+ * @param rect 指定的区域
+ * @param timeout 超时时间
+ * @param block 回调block(resultImage:返回的图片,state：0载入不完整，1完整）
+ */
+- (void)takeSnapshotInRect:(CGRect)rect timeoutInterval:(NSTimeInterval)timeout completionBlock:(void (^)(UIImage *resultImage, NSInteger state))block;
+
+/**
  * @brief 在指定的缩放级别下, 基于地图中心点, 1 screen point 对应的距离(单位是米).
  * @param zoomLevel 指定的缩放级别, 在[minZoomLevel, maxZoomLevel]范围内.
  * @return 对应的距离(单位是米)
@@ -404,6 +412,12 @@ extern NSString * const kMAMapLayerCameraDegreeKey;
  * @brief 强制刷新。（since 6.0.0）
  */
 - (void)forceRefresh;
+
+/**
+ * @brief 设置在建道路图层是否显示。默认NO（since 7.7.0）
+ * @param enabled 是否显示
+ */
+- (void)setConstructingRoadEnable:(BOOL)enabled;
 
 @end
 
